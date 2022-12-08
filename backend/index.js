@@ -2,7 +2,7 @@ const express= require('express')
 const connections= require('./config/db')
 const app= express()
 const cors= require('cors')
-const userRoute= require('./routes/user')
+const userRoute= require('./controller/user')
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -15,7 +15,9 @@ app.get('/',(req,res)=>{
 })
 app.use('/auth',userRoute)
 
-app.listen(8080,async()=>{
+const port = process.env.PORT || 8080;
+
+app.listen(port,async()=>{
     await connections;
     console.log("server listening on port 8080")
 })
