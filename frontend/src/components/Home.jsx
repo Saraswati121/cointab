@@ -24,7 +24,7 @@ export const Home = () => {
       </div>
 
      
-      <div><h1>Hello {userid}</h1></div>
+      <div><h2>Hello {userid}</h2></div>
     </div>
   )
 }

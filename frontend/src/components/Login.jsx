@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './style.css'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from "react-router-dom";
 
 export const Login = () => {
   const [formData,setformData] = useState({})
@@ -36,6 +36,7 @@ export const Login = () => {
 }
   return (
     <div className='main'>
+      <h1>LogIn</h1>
        <input type="email" name='email' onChange={handelChange} placeholder='Enter Email..'/><br />
         <input type="text" name='password' onChange={handelChange} placeholder='Enter password..'/><br />
         <button className='btn1' onClick={handelogin}>Submit</button>

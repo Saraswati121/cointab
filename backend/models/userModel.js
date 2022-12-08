@@ -2,9 +2,7 @@ const mongoose = require('mongoose')
 
 const userSchema= mongoose.Schema({
     email:String,
-    password:String,
-    blockTill:Number,
-    time:Number
+    password:String
 })
 
 const userModel = mongoose.model("users",userSchema)
